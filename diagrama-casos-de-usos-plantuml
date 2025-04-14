@@ -1,0 +1,31 @@
+@startuml
+title Diagrama de Casos de Uso - Juego del Ahorcado
+
+' Actores principales
+actor Usuario
+actor Jugador
+actor Administrador
+
+' Herencia
+Jugador --|> Usuario
+Administrador --|> Usuario
+
+' Casos de uso comunes a todos los usuarios (opcional)
+Usuario --> (Registrarse)
+Usuario --> (Iniciar sesión)
+
+' Casos de uso del Jugador
+Jugador --> (Jugar partida)
+Jugador --> (Ver estadísticas)
+Jugador --> (Seleccionar idioma)
+Jugador --> (Consultar palabras/frases)
+
+' Casos de uso del Administrador
+Administrador --> (Gestionar usuarios)
+Administrador --> (Gestionar juegos)
+Administrador --> (Gestionar partidas)
+Administrador --> (Gestionar palabras/frases)
+Administrador --> (Ver histórico de palabras)
+Administrador --> (Gestionar cuotas)
+
+@enduml
